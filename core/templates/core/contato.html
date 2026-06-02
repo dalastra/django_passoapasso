@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Formulário de Contato</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">
+                Enviar
+            </button>
+        </form>
+
+        <div class="links">
+            <a href="/">Voltar</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
